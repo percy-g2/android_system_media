@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2011 The Android Open Source Project
+ * Modifications Copyright (C) 2013 The OmniROM Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,8 +15,8 @@
  * limitations under the License.
  */
 
-#ifndef ANDROID_EFFECT_BASSBOOST_H_
-#define ANDROID_EFFECT_BASSBOOST_H_
+#ifndef ANDROID_EFFECT_STEREOWIDE_H_
+#define ANDROID_EFFECT_STEREOWIDE_H_
 
 #include <hardware/audio_effect.h>
 
@@ -24,22 +25,22 @@ extern "C" {
 #endif
 
 #ifndef OPENSL_ES_H_
-static const effect_uuid_t SL_IID_BASSBOOST_ = { 0x0634f220, 0xddd4, 0x11db, 0xa0fc,
-        { 0x00, 0x02, 0xa5, 0xd5, 0xc5, 0x1b } };
-const effect_uuid_t * const SL_IID_BASSBOOST = &SL_IID_BASSBOOST_;
+/* 37cc2c00-dddd-11db-8577-0002a5d5c51c */
+static const effect_uuid_t SL_IID_STEREOWIDE_ = { 0x37cc2c00, 0xdddd, 0x11db, 0x8577,
+        { 0x00, 0x02, 0xa5, 0xd5, 0xc5, 0x1c } };
+const effect_uuid_t * const SL_IID_STEREOWIDE = &SL_IID_STEREOWIDE_;
 #endif //OPENSL_ES_H_
 
-/* enumerated parameter settings for BassBoost effect */
+/* enumerated parameter settings for stereowide effect */
 typedef enum
 {
-    BASSBOOST_PARAM_STRENGTH_SUPPORTED,
-    BASSBOOST_PARAM_STRENGTH,
-    BASSBOOST_PARAM_CENTER_FREQUENCY
-} t_bassboost_params;
+    STEREOWIDE_PARAM_STRENGTH_SUPPORTED,
+    STEREOWIDE_PARAM_STRENGTH
+} t_stereowide_params;
 
 #if __cplusplus
 }  // extern "C"
 #endif
 
 
-#endif /*ANDROID_EFFECT_BASSBOOST_H_*/
+#endif /*ANDROID_EFFECT_VIRTUALIZER_H_*/
